@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #cad0d4;
+  font-family: arial;
+}
+.calculator {
+  display: flex;
+  justify-content: center;
+}
+.calculator form > div {
+  background-color: #acacac;
+  border: 20px solid #acacac;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px rgb(53, 59, 65);
+}
+.calculator form > div > div .display {
+  text-align: right;
+  caret-color: cadetblue;
+  outline: 0;
+  border: 0;
+  border: 1px groove;
+  width: 280px;
+  background-color: #ffffff;
+  border: 4px outset #797d7f;
+  padding-right: 15px;
+  box-shadow: 0px 0px 20px rgb(45, 52, 59) inset;
+}
+.calculator form > div > div .top-input {
+  color: rgb(160, 0, 0);
+}
+.calculator form > div > div > h3 {
+  height: 0;
+  position: relative;
+  top: -10px;
+}
+.calculator form > div > div input {
+  height: 60px;
+  width: 60px;
+  margin: 10px 5px;
+  outline: 0;
+  border: 2px solid #17202a;
+  background-color: #797d7f;
+  border-radius: 10px;
+  font-size: 32px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  box-shadow: 5px 5px 10px rgb(45, 52, 59);
+}
+.calculator form div > div .equals {
+  height: 140px;
+  position: absolute;
+  margin-left: 10px;
+}
+.calculator form div > div > .input:hover,
+.equals:hover {
+  background-color: #5e5d5d;
+  transform: scale(1.02);
+}
+.calculator form div > div > .input:active,
+.equals:active {
+  background-color: #17202a;
+  transform: scale(0.9);
+  color: white;
+}
+.dark-button {
+  background: transparent;
+  color: black;
+  border: 0px;
+  outline: 0;
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  transition: all 0.3s ease-in;
+}
+.dark-button:hover {
+  transform: scale(1.1);
+}
+.dark-button > i {
+  animation-name: dark;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes dark {
+  0% {
+    transform: rotateX(0, 90deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+.light-button {
+  background-color: transparent;
+  color: #cad0d4;
+  border: 0;
+  outline: 0;
+  position: absolute;
+  left: 90px;
+  top: 10px;
+  transition: all 0.3s ease-in;
+}
+.light-button:hover {
+  transform: scale(1.1);
+}
+.light-button > i {
+  animation-name: light;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes light {
+  0% {
+    transform: rotate(0, 90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.dlbut {
+  cursor: pointer;
+  z-index: 99;
+}
+.mode {
+  background-color: black;
+  color: white;
+  transition: all 0.4s linear;
+}
+.mode-light {
+  filter: invert(0%);
+  transition: all 0.4s linear;
+}
